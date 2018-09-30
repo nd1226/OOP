@@ -21,7 +21,11 @@ namespace OOP
         }
         public double ChuVi()
         {
-            return DiemA.KhoangCach(DiemB) + DiemA.KhoangCach(DiemC) + DiemB.KhoangCach(DiemC)
+            return DiemA.KhoangCach(DiemB) + DiemA.KhoangCach(DiemC) + DiemB.KhoangCach(DiemC);
+        }
+        public double DienTich() {
+            double p = ChuVi() / 2;
+            return Math.Sqrt(DiemA.KhoangCach(DiemB) * DiemA.KhoangCach(DiemC) * DiemB.KhoangCach(DiemC));
         }
     }
 }
