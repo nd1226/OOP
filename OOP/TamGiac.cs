@@ -8,8 +8,6 @@ namespace OOP
 {
     public class TamGiac
     {
-        
-
         public Point DiemA { get; set; }
         public Point DiemB { get; set; }
         public Point DiemC { get; set; }
@@ -25,7 +23,7 @@ namespace OOP
         }
         public double DienTich() {
             double p = ChuVi() / 2;
-            return Math.Sqrt(DiemA.KhoangCach(DiemB) * DiemA.KhoangCach(DiemC) * DiemB.KhoangCach(DiemC));
+            return Math.Sqrt((p-DiemA.KhoangCach(DiemB)) * (p-DiemA.KhoangCach(DiemC)) * (p-DiemB.KhoangCach(DiemC)));
         }
     }
 }
